@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Heading from "./Heading";
 
-function Home() {
+function Public() {
   return (
     <div className="row">
         <Heading />
@@ -17,5 +17,5 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default Public;
 

@@ -24,7 +24,7 @@ function Sidebar() {
         {content.map((link, index) => (
           <Link
             key={index}
-            to={`/Home/${link.name}`}
+            to={`/Public/${link.name}`}
             className={`nav-bar-style ${
               pathname.includes(link.name) && "active"
             }`}
