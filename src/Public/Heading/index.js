@@ -5,16 +5,18 @@ function Heading() {
   // make a title bar with three buttons in it
 
     const navigate = useNavigate();
-    const signIn = navigate("/signin");
   return (
     <div className="row">
         <img src={"../../images/nba-logo.jpg"} alt="NBA Logo" width={80} />
       <label>My NBA Page</label>
       <span>
         <button
-          onClick={signIn}
+          onClick={() => navigate("/signin")}
         >
           Sign In
+        </button>
+          <button onClick={() => navigate("/signup")}>
+          Sign Up
         </button>
       </span>
     </div>
