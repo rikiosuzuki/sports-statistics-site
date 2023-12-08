@@ -1,15 +1,18 @@
 import React from "react";
+import {useNavigate} from "react-router";
 
 function Heading() {
   // make a title bar with three buttons in it
+
+    const navigate = useNavigate();
+    const signIn = navigate("/signin");
   return (
     <div className="row">
         <img src={"../../images/nba-logo.jpg"} alt="NBA Logo" width={80} />
       <label>My NBA Page</label>
       <span>
         <button
-          className="btn btn-primary float-right"
-          style={{ display: "flex", justifyContent: "flex-end" }}
+          onClick={signIn}
         >
           Sign In
         </button>

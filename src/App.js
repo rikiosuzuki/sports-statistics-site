@@ -4,6 +4,7 @@ import "./App.css";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Home";
 import Signin from "./User/Signin";
+import Account from "./User/Account";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Navigate to="/Home" />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Signin" element={<Signin />} />
+          <Route path="/account" element={<Account/>}  />
         </Routes>
       </HashRouter>
     </div>
