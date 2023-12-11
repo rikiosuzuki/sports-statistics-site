@@ -1,0 +1,49 @@
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heading-center {
+	display: flex;
+	align-items: center;
+}
+
+.heading-center input {
+	padding: 5px 10px;
+	margin-right: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.search-icon {
+	cursor: pointer;
+}
+
+.heading-right {
+	display: flex;
+	align-items: center;
+}
+
+.icon {
+	font-size: 25px;
+	margin-left: 20px;
+	cursor: cursor;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.name {
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+
+/* Add additional styles for the dropdown and other elements as needed */

@@ -1,14 +1,51 @@
 import React from "react";
-import {useNavigate} from "react-router";
+import "./index.css"
+import {FaSearch} from "react-icons/fa";
+import { statSearch } from "./client";
+import { useState } from "react";
+import {useNavigate} from "react-router-dom";
+// import { useSelector } from "react-redux";
 
 function Heading() {
-  // make a title bar with three buttons in it
+  // // make a title bar with three buttons in it
 
-    const navigate = useNavigate();
+	// const [searchTerm, setSearchTerm] = useState("");
+	// const [errorMessage, setErrorMessage] = useState("");
+	// const account = useSelector((state) => state.accountReducer.account);
+	// const handleSearch = async () => {
+	// 	try {
+	// 		const searchData = await statSearch(searchTerm);
+	// 		console.log("Search Data:", searchData);
+	// 		navigate("/makemoney/home", { state: { searchData } });
+	// 	} catch (error) {
+	// 		console.log("Error occurred:", error);
+	// 		setErrorMessage(error.response.data.message);
+	// 		navigate("/makemoney/home", { state: { errorMessage } });
+	// 	}
+  // };
+	// const handleChange = (e) => {
+	// 	setSearchTerm(e.target.value);
+  // };
+  const navigate = useNavigate();
+  
   return (
-    <div className="row">
+    <div className="heading">
         <img src={"../../images/nba-logo.jpg"} alt="NBA Logo" width={80} />
-      <label>My NBA Page</label>
+      <h2>My NBA Page</h2>
+
+      <div className="heading-center">
+				<input
+					type="text"
+					placeholder="Search for Team, Player, or Statistic"
+					// value={searchTerm}
+					// onChange={handleChange}
+				/>
+				<button className="btn btn-light">
+        {/* onClick={handleSearch} */}
+					<FaSearch className="search-icon" />
+				</button>
+			</div>
+      
       <span>
         <button
           onClick={() => navigate("/signin")}
