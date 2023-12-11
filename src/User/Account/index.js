@@ -1,7 +1,6 @@
-
+import React from "react";
 import * as client from "../client.js";
 import { useState, useEffect } from "react";
-
 import {Link, useNavigate, useParams} from "react-router-dom";
 
 
@@ -9,6 +8,11 @@ function Account(){
     const [account, setAccount] = useState(null);
     const navigate = useNavigate();
 
+    const save = async () => {
+
+        await client.updateUser(account);
+    };
+    const { id } = useParams();
 
     const findUserById = async (id) => {
         const user = await client.findUserById(id);
@@ -18,13 +22,25 @@ function Account(){
     const signout = async () => {
         await client.signout();
         navigate("/signin");
-    }
-    const save = async () => {
-
-        await client.updateUser(account);
     };
 
 
+    const fetchAccount = async () => {
+        const account = await client.account();
+        console.log(account);
+        setAccount(account);
+    };
+    useEffect(() => {
+        //console.log(id);
+        if (id) {
+            console.log("user found");
+            findUserById(id);
+        } else {
+            fetchAccount();
+            console.log("test");
+        }
+
+    }, []);
     return(
         <div>
             <h1>Account</h1>

@@ -3,13 +3,12 @@ import * as client from "../client";
 import {useNavigate} from "react-router";
 
 function Signin() {
+    const [credentials, setCredentials] = useState({ username: "", password: "" });
     const navigate = useNavigate();
-    const [credentials, setCredentials] = useState({username: "", password: ""})
     const signin = async () => {
-        await client.signin(credentials);
-        navigate("/account");
+      await client.signin(credentials);
+      navigate("/account");
     };
-
     return (
         <div>
             <h3>Signin page</h3>
