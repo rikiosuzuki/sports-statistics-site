@@ -4,28 +4,27 @@ import {FaSearch} from "react-icons/fa";
 import { statSearch } from "./client";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Heading() {
   // // make a title bar with three buttons in it
 
-	// const [searchTerm, setSearchTerm] = useState("");
-	// const [errorMessage, setErrorMessage] = useState("");
-	// const account = useSelector((state) => state.accountReducer.account);
-	// const handleSearch = async () => {
-	// 	try {
-	// 		const searchData = await statSearch(searchTerm);
-	// 		console.log("Search Data:", searchData);
-	// 		navigate("/makemoney/home", { state: { searchData } });
-	// 	} catch (error) {
-	// 		console.log("Error occurred:", error);
-	// 		setErrorMessage(error.response.data.message);
-	// 		navigate("/makemoney/home", { state: { errorMessage } });
-	// 	}
-  // };
-	// const handleChange = (e) => {
-	// 	setSearchTerm(e.target.value);
-  // };
+	const [searchTerm, setSearchTerm] = useState("");
+	const [errorMessage, setErrorMessage] = useState("");
+	const handleSearch = async () => {
+		try {
+			const searchData = await statSearch(searchTerm);
+			console.log("Search Data:", searchData);
+			navigate("/makemoney/home", { state: { searchData } });
+		} catch (error) {
+			console.log("Error occurred:", error);
+			setErrorMessage(error.response.data.message);
+			navigate("/makemoney/home", { state: { errorMessage } });
+		}
+  };
+	const handleChange = (e) => {
+		setSearchTerm(e.target.value);
+  };
   const navigate = useNavigate();
   
   return (
@@ -37,11 +36,11 @@ function Heading() {
 				<input
 					type="text"
 					placeholder="Search for Team, Player, or Statistic"
-					// value={searchTerm}
-					// onChange={handleChange}
+					value={searchTerm}
+					onChange={handleChange}
 				/>
-				<button className="btn btn-light">
-        {/* onClick={handleSearch} */}
+				<button className="btn btn-light" onClick={handleSearch}>
+ 
 					<FaSearch className="search-icon" />
 				</button>
 			</div>
