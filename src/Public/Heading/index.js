@@ -4,7 +4,7 @@ import {FaSearch} from "react-icons/fa";
 import { statSearch } from "./client";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 function Heading() {
   // // make a title bar with three buttons in it
