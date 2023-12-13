@@ -1,12 +1,12 @@
 import React from "react";
-import Activity from "../activity";
+import Activity from "../Activity/activity";
 import Account from "../account";
 import UserTable from "../table";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function UserPage() {
   return (
-    <div>
+    <div style={{ marginLeft: "120px" }}>
       <Routes>
         <Route
           path="/"

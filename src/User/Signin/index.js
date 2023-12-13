@@ -7,7 +7,7 @@ function Signin() {
     const navigate = useNavigate();
     const signin = async () => {
       await client.signin(credentials);
-      navigate("/Profile");
+      navigate("/Profile/User/Activity");
     };
     const cancel = async () => {
         navigate("/Public/Home");

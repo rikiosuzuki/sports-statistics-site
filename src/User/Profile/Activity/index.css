@@ -1,0 +1,24 @@
+/*
+------------ COLORS ------------
+*/
+
+/* create a css styling that centers the content and creates a border around the content */
+.centered-boxed-content {
+  display: flex;
+  /* justify-content: center;*/ 
+  align-items: center; 
+  border: 2px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* creating margin and padding for buttons */
+.button-margin {
+  margin: 5px;
+  padding: 2px;
+  /* increase the font size of the button */
+    font-size: 15px;
+    /* make the button bold */
+    font-weight: bold;
+}
