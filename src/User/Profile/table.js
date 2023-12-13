@@ -6,6 +6,7 @@ import {
   BsPlusCircleFill,
 } from "react-icons/bs";
 import * as client from "../client";
+
 function UserTable() {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({
