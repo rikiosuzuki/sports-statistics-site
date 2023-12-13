@@ -1,15 +1,17 @@
 import React from "react";
 import axios from "axios";
 import "./index.css";
-import * as client from "./client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import * as client from "./client";
 function Activity() {
-// a setPost has an empty title, empty description, and the current user's username
+  // a setPost has an empty title, empty description, and the current user's username
 
-  const [postInfo, setPost] = useState({ title: "", description: "", author: client.getUser().username });
-  const navigate = useNavigate();
+  const [postInfo, setPost] = useState({
+    title: "",
+    description: "",
+    // author: client.getUser().username,
+  });
   // const signin = async () => {
   //   await client.signin(credentials);
   //   navigate("/project/account");
@@ -30,15 +32,23 @@ function Activity() {
       <h1>Activity page</h1>
       <div className="row centered-boxed-content">
         <div className="col-11">
-          <h5>Create New Post</h5>
-          
-
-          <input value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
-          <input value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
-
-
-
-
+          <label>Create New Post</label>
+          <div>
+            <label>Title: </label>
+            <input
+              value={postInfo.title}
+              onChange={(e) => setPost({ ...postInfo, title: e.target.value })}
+            />
+          </div>
+          <div>
+            <label>Description: </label>
+            <input
+              value={postInfo.description}
+              onChange={(e) =>
+                setPost({ ...postInfo, description: e.target.value })
+              }
+            />
+          </div>
         </div>
         <div className="col-1">
           <button

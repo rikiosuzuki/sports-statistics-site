@@ -1,5 +1,5 @@
 import React from "react";
-import Activity from "../Activity/activity";
+import Activity from "../activity";
 import Account from "../account";
 import UserTable from "../table";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
