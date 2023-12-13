@@ -2,7 +2,7 @@ import axios from "axios";
 
 const request = axios.create({
   withCredentials: true,
-});
+}); 
 
 export const BASE_API = process.env.REACT_APP_BASE_API_URL;
 export const USERS_API = `${BASE_API}/api/users`;
@@ -58,6 +58,8 @@ export const deletePost = async (post) => {
   return response.data;
 };
 export const createPost = async (post) => {
+  console.log("post_api", POSTS_API);
+  console.log("post", post);
   const response = await request.post(`${POSTS_API}`, post);
   return response.data;
 

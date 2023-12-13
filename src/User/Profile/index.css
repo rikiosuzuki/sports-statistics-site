@@ -17,15 +17,13 @@
 .button-margin {
   margin: 5px;
   padding: 2px;
-  /* increase the font size of the button */
   font-size: 15px;
-  /* make the button bold */
   font-weight: bold;
 }
 
 /* create a css styling that centers the content and creates a border around the content with purple fill with yellow borders */
 .content-colored {
-  display: flex;
+  /* display: flex; */
   /* justify-content: center;*/
   align-items: center;
   border: 2px solid #000000;

@@ -12,8 +12,8 @@ function Activity() {
     description: "",
   });
   const addNewPost = async () => {
-    console.log("Adding a new course");
-    console.log(post);
+    console.log("Adding a new post");
+    console.log("Sending Post: " + post);
     try {
       const newPost = await client.createPost(post);
       setPosts([newPost, ...posts]);
@@ -24,12 +24,12 @@ function Activity() {
 
   const updatedPost = () => {
     //update a post
-    console.log("Updating the course");
+    console.log("Updating the post");
   };
 
   const deletePost = () => {
     //delete a post
-    console.log("Deleting the course");
+    console.log("Deleting the post");
   };
 
   const fetchPost = async () => {
@@ -83,18 +83,7 @@ function Activity() {
         </div>
       </div>
       <div className="list-group">
-        <div className="list-group-item content-colored ">
-          <div>
-            <label>Title: </label>
-          </div>
-          <div>
-            <label>Description: </label>
-          </div>
-          <button className="btn btn-danger" onClick={() => deletePost(post)}>
-            <BsTrash3Fill />
-          </button>
-        </div>
-        <div className="list-group-item centered-boxed-content">
+        <div className="list-group-item content-colored">
           {console.log(posts)}
           {posts.map(
             (post) => (

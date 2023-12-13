@@ -14,7 +14,7 @@ function Signup() {
   const signup = async () => {
     try {
       await client.signup(credentials);
-      navigate("/account");
+      navigate("/Profile/User/Activity");
     } catch (err) {
       const errorMessage =
         err.response?.data?.message || "An error occurred during signup.";
