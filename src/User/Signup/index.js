@@ -21,6 +21,9 @@ function Signup() {
       setError(errorMessage);
     }
   };
+  const cancel = async () => {
+    navigate("/Public/Home");
+  };
 
     return (
         <div>
@@ -75,6 +78,8 @@ function Signup() {
             <button onClick={signup}>
                 Signup
             </button>
+            <button onClick={cancel}> Cancel </button>
+
         </div>
     )
 

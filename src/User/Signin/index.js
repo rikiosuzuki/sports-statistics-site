@@ -7,8 +7,12 @@ function Signin() {
     const navigate = useNavigate();
     const signin = async () => {
       await client.signin(credentials);
-      navigate("/account");
+      navigate("/Profile");
     };
+    const cancel = async () => {
+        navigate("/Public/Home");
+        };
+
     return (
         <div>
             <h3>Signin page</h3>
@@ -17,6 +21,7 @@ function Signin() {
             <label>Password</label>
             <input value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
             <button onClick={signin}> Signin </button>
+            <button onClick={cancel}> Cancel </button>
 
         </div>
     );

@@ -29,7 +29,7 @@ function Heading() {
   
   return (
     <div className="heading">
-        <img src={"../../images/nba-logo.jpg"} alt="NBA Logo" width={80} />
+        <img src={".src/images/nba-logo.jpg"} alt="NBA Logo" width={80} />
       <h2>My NBA Page</h2>
 
       <div className="heading-center">

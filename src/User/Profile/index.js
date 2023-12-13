@@ -1,23 +1,24 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Heading from "./Heading";
-import Home from "./Home";
+import UserHeading from "./UserHeading";
+import UserSidebar from "./UserSidebar";
+import UserPage from "./UserPage";
 
-function Public() {
+function User() {
   return (
     <div className="row">
-      <Heading />
+      <UserHeading />
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <Sidebar />
+            <UserSidebar />
           </div>
           <div className="col-10">
-            <Home />
+            <UserPage />
           </div>
         </div>
       </div>
     </div>
   );
 }
-export default Public;
+
+export default User;

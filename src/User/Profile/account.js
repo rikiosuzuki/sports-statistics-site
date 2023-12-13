@@ -42,7 +42,8 @@ function Account(){
     }, []);
     return(
         <div>
-            <h1>Account</h1>
+            <h1>User Profile</h1>
+            {/* page for user to view and edit their profile */}
             {account && (
                 <div>
                     <input value={account.password}
