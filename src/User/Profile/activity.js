@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./index.css";
 import * as client from "./client";
-import { BsTrash3Fill, BsPencilFill} from "react-icons/bs";
+import { BsTrash3Fill, BsPencilFill } from "react-icons/bs";
 
 function Activity() {
   // a setPost has an empty title, empty description, and the current user's username
@@ -36,10 +36,11 @@ function Activity() {
     );
   };
 
-  const deletePost = (postId) => {
+  const deletePost = (post) => {
     //delete a post
     console.log("Deleting the post");
-    setPosts(posts.filter((post) => post._id !== postId));
+    console.log("Post ID: " + post._id);
+    setPosts(posts.filter((post) => post._id !== post._id));
 
   };
 
@@ -91,43 +92,36 @@ function Activity() {
           >
             Update
           </button>
-          
         </div>
       </div>
       <div className="list-group">
         <div className="list-group-item content-colored">
           {console.log(posts)}
-          {posts.map(
-            (post) => (
-              (
-                <div key={post._id}>
-                  <label>Title: {post.title}</label>
-                  <label>Description: {post.description}</label>
+          {posts.map((post) => (
+            <div key={post._id}>
+              <label>Title: {post.title}</label>
+              <label>Description: {post.description}</label>
 
-                  <button
-                    className="btn btn-warning"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      setPost(post);
-                    }}
-                  >
-                    <BsPencilFill />
-                    Edit
-                  </button>
+              <button
+                className="btn btn-warning"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setPost(post);
+                }}
+              >
+                <BsPencilFill />
+                Edit
+              </button>
 
-
-           
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => deletePost(post)}
-                  >
-                    <BsTrash3Fill />
-                    Delete
-                  </button>
-                </div>
-              )
-            )
-          )}
+              <button
+                className="btn btn-danger"
+                onClick={() => deletePost(post)}
+              >
+                <BsTrash3Fill />
+                Delete
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </div>

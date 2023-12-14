@@ -54,13 +54,16 @@ export const updateUser = async (user) => {
 /* Posts stuff */
 
 export const deletePost = async (post) => {
+  console.log("post", post);
+  console.log("post._id", post._id);
+  console.log("deleting this post");
   const response = await request.delete(`${POSTS_API}/${post._id}`);
   return response.data;
 };
 export const createPost = async (post) => {
   console.log("post_api", POSTS_API);
   console.log("post", post);
-  
+
   const response = await request.post(`${POSTS_API}`, post);
   return response.data;
 };
