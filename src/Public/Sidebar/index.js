@@ -14,7 +14,7 @@ import { MdOutlineScoreboard } from "react-icons/md";
 
 function Sidebar() {
   const content = [
-    { name: "Home"} ,
+    { name: "Welcome"} ,
     { name: "Games"},
     { name: "News"},
     { name: "Teams"},
@@ -25,7 +25,7 @@ function Sidebar() {
   ];
 
   const linksToIconsMap = {
-    Home: <FaHome className="text-muted" />,
+    Welcome: <FaHome className="text-muted" />,
     Games: <MdOutlineScoreboard className="text-muted" />,
     News: <FaRegNewspaper className="text-muted" />,
     Teams: <FaUsers className="text-muted" />,
