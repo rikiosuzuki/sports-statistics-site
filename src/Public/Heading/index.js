@@ -15,11 +15,11 @@ function Heading() {
 		try {
 			const searchData = await statSearch(searchTerm);
 			console.log("Search Data:", searchData);
-			navigate("/makemoney/home", { state: { searchData } });
+			navigate("/Public/Home", { state: { searchData } });
 		} catch (error) {
 			console.log("Error occurred:", error);
 			setErrorMessage(error.response.data.message);
-			navigate("/makemoney/home", { state: { errorMessage } });
+			navigate("/Public/Home", { state: { errorMessage } });
 		}
   };
 	const handleChange = (e) => {

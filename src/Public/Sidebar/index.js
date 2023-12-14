@@ -25,37 +25,39 @@ function Sidebar() {
   ];
 
   const linksToIconsMap = {
-    Welcome: <FaHome className="text-muted" />,
-    Games: <MdOutlineScoreboard className="text-muted" />,
-    News: <FaRegNewspaper className="text-muted" />,
-    Teams: <FaUsers className="text-muted" />,
-    Players: <FaUser className="text-muted" />,
-    Rankings: <FaMedal className="text-muted" />,
-    History: <FaHistory className="text-muted" />,
-    About: <FaQuestionCircle className="text-muted" />,
+    Welcome: <FaHome color="white" />,
+    Games: <MdOutlineScoreboard color="white" />,
+    News: <FaRegNewspaper color="white"/>,
+    Teams: <FaUsers color="white"/>,
+    Players: <FaUser color="white"/>,
+    Rankings: <FaMedal color="white"/>,
+    History: <FaHistory color="white"/>,
+    About: <FaQuestionCircle color="white"/>,
   };
 
   const { pathname } = useLocation();
 
   return (
-    <div className="nav-fixed d-flex">
-      <div
-        className="list-group"
-        style={{textDecoration: "none" }}
-      >
-        {content.map((link, index) => (
-          <Link
-            key={index}
-            to={`/Public/Home/${link.name}`}
-            className={`nav-bar-style ${
-              pathname.includes(link.name) && "active"
-            }`}
-          >
-              {linksToIconsMap[link.name]}
-              {link.name}
+    <div id="sidebar">
+      <div className="nav-fixed d-flex">
+        <div
+          className="nav-bar-style"
+          style={{textDecoration: "none" }}
+        >
+          {content.map((link, index) => (
+            <Link
+              key={index}
+              to={`/Public/Home/${link.name}`}
+              className={`nav-bar-style ${
+                pathname.includes(link.name) && "active"
+              }`}
+            >
+                {linksToIconsMap[link.name]}
+                {link.name}
 
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

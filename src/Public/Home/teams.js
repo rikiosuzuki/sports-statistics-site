@@ -67,7 +67,7 @@ class Teams extends Component {
               type="text"
               value={this.state.value}
               onChange={this.handleChange}
-              placeholder="please enter the TEAM name"
+              placeholder="Enter the TEAM name!"
             />
           </label>
           <input type="submit" value="Submit" />
