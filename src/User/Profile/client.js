@@ -60,16 +60,9 @@ export const deletePost = async (post) => {
 export const createPost = async (post) => {
   console.log("post_api", POSTS_API);
   console.log("post", post);
+  
   const response = await request.post(`${POSTS_API}`, post);
   return response.data;
-
-    /*
-  export const signup = async (credentials) => {
-    const response = await request.post(
-        `${USERS_API}/signup`, credentials);
-    return response.data;
-};
-  */
 };
 export const findAllPosts = async () => {
   const response = await request.get(`${POSTS_API}`);
