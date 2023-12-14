@@ -5,10 +5,10 @@
     position: fixed;
 }
 
-.nav-bar-style {
+#sidebar .nav-bar-style {
+    display: flex;
     background-color: black;
     color: white;
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
@@ -24,4 +24,13 @@
 .nav-link-style {
     text-decoration: none;
     font-size: 18px;
+}
+
+#sidebar .nav-bar-style.active {
+    background-color: black;
+    color: red;
+}
+
+#sidebar .nav-bar-style.active i {
+    color: blue;
 }
