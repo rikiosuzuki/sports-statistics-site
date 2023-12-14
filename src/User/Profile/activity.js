@@ -36,9 +36,11 @@ function Activity() {
     );
   };
 
-  const deletePost = () => {
+  const deletePost = (postId) => {
     //delete a post
     console.log("Deleting the post");
+    setPosts(posts.filter((post) => post._id !== postId));
+
   };
 
   const fetchPost = async () => {
