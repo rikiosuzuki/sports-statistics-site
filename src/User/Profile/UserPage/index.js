@@ -6,12 +6,9 @@ import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function UserPage() {
   return (
-    <div style={{ marginLeft: "120px" }}>
+    <div>
       <Routes>
-        <Route
-          path="/"
-          element={<Navigate to="/Activity" />}
-        />
+        <Route path="/" element={<Navigate to="/Activity" />} />
         <Route path="/Activity" element={<Activity />} />
         <Route path="/Profile" element={<Account />} />
         <Route path="/AllUsers" element={<UserTable />} />

@@ -8,11 +8,11 @@ function Public() {
     <div className="row">
       <Heading />
       <div className="container">
-        <div className="row">
-          <div className="col-2">
+        <div className="row" style={{paddingTop:'5px'}}>
+          <div className="col-1">
             <Sidebar />
           </div>
-          <div className="col-10">
+          <div className="col-11">
             <Home />
           </div>
         </div>

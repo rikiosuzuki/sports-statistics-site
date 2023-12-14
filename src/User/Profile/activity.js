@@ -4,6 +4,10 @@ import "./index.css";
 import * as client from "./client";
 import { BsTrash3Fill, BsPencilFill } from "react-icons/bs";
 
+
+
+
+
 function Activity() {
   // a setPost has an empty title, empty description, and the current user's username
   const [posts, setPosts] = useState([]);

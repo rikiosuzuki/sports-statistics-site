@@ -38,21 +38,22 @@ function Sidebar() {
   const { pathname } = useLocation();
 
   return (
-    <div className="nav-fixed">
+    <div className="nav-fixed d-flex">
       <div
         className="list-group"
-        style={{ width: 100, textDecoration: "none" }}
+        style={{textDecoration: "none" }}
       >
         {content.map((link, index) => (
           <Link
             key={index}
-            to={`/Public/${link.name}`}
+            to={`/Public/Home/${link.name}`}
             className={`nav-bar-style ${
               pathname.includes(link.name) && "active"
             }`}
           >
               {linksToIconsMap[link.name]}
               {link.name}
+
           </Link>
         ))}
       </div>
