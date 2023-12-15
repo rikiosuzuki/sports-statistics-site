@@ -9,6 +9,12 @@ import { BsTrash3Fill, BsPencilFill } from "react-icons/bs";
 
 
 function Activity() {
+  const [account, setAccount] = useState(null);
+  const fetchAccount = async () => {
+    const account = await client.account();
+    console.log(account);
+    setAccount(account);
+  };
   // a setPost has an empty title, empty description, and the current user's username
   const [posts, setPosts] = useState([]);
   const [post, setPost] = useState({
@@ -44,6 +50,11 @@ function Activity() {
     //delete a post
     console.log("Deleting the post");
     console.log("Post ID: " + post._id);
+    if(account.role ==="USER"){
+      alert("Must be an admin to delete posts!");
+      return;
+
+    }
     await client.deletePost(post);
     setPosts(posts.filter((poster) => poster._id !== post._id));
 
@@ -53,14 +64,18 @@ function Activity() {
     try {
       const posts = await client.findAllPosts();
       setPosts(posts);
+      fetchAccount();
     } catch (err) {
       console.log(err);
+
     }
   };
 
   useEffect(() => {
     fetchPost();
   }, []);
+
+
   return (
     <div>
       <h1>Activity page</h1>
