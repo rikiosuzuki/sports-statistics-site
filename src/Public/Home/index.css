@@ -1,0 +1,15 @@
+.myRow{
+    display: flex;
+    flex-direction: row;
+    padding-right: 100px;
+}
+
+.col{
+    flex: 1 0;
+}
+
+.row {
+    background-color: #F5F7F9;
+    padding: 10px;
+    display: flex;
+}
