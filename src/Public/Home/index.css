@@ -1,15 +1,94 @@
-.myRow{
+.myRow {
     display: flex;
     flex-direction: row;
     padding-right: 100px;
 }
 
-.col{
+.col {
     flex: 1 0;
 }
 
-.row {
-    background-color: #F5F7F9;
+.playerLabels {
+    color: #f5b112;
+    font-size: large;
+font-weight: bold;
+}
+.playerResultLabels {
+    color: black;
+    background-color: #c8102e;
+    border-radius: 2px;
+    border: 2px solid #bec0c2;
+    width: 100px;
+    margin-left: 5px;
+}
+
+.contentStyle {
+    color: #ffc72c;
+}
+
+.loadStyle {
+    background-color: #007a33;
+    color: #ffc72c;
+    border: 2px solid #963821;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.submitButton {
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: large;
+    background-color: #963821;
+    color: #ffc72c;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Basic table styling */
+.table-container {
+    width: 100%;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    /* Optional margin between the table and other elements */
+    border-color: #963821;
+
+}
+
+/* Table header styles */
+th {
+    background-color: #007a33;
+    /* Header background color */
+    color: #ffc72c;
+    /* Header text color */
     padding: 10px;
-    display: flex;
+    text-align: left;
+
+}
+
+/* Table cell styles */
+td,
+th {
+    padding: 8px;
+    border: 2px solid #963821;
+    /* Border color between header and cells */
+    color: black; 
+
+}
+
+/* Alternate row coloring for better readability */
+tr:nth-child(even) {
+    background-color: #fdbb30;
+    /* Background color for even rows */
+}
+
+/* Hover effect on rows */
+tr:hover {
+    background-color: #002d62;
+    /* Background color on hover */
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import "./index.css";
 class Teams extends Component {
   constructor(props) {
     super(props);
@@ -29,11 +29,13 @@ class Teams extends Component {
   render() {
     return (
       <div className="App">
-        <form onSubmit={this.handleSubmit}>
-          <label>Load Teams</label>
-          <input type="submit" value="Submit" />
-        </form>
-        <table className="table table-bordered table-striped">
+        <div className="loadStyle">
+          <form onSubmit={this.handleSubmit}>
+            <label >Load Teams</label>
+            <input type="submit" value="Submit" className="submitButton" />
+          </form>
+        </div>
+        <table className="table-container">
           <thead>
             <tr>
               <th>Team Name</th>

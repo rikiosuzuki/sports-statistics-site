@@ -1,26 +1,38 @@
-.heading {
+.heading-bar {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	background-color: #ffffff;
+	padding: 15px;
+	background-color: rgb(0, 0, 0);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .heading-center {
-	display: flex;
 	align-items: center;
+	padding-left: 50px;
+	padding-right: 50px;
+
 }
 
-.heading-center input {
-	padding: 5px 10px;
-	margin-right: 5px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+.titleStyle {
+	font-size: 30px;
+	color: #ffffff;
 }
 
-.search-icon {
-	cursor: pointer;
+.button-stuff {
+	padding-right: 30px;
+}
+.signButtons {
+	margin: 10px;
+	align-items: center;
+	background-color: #552583;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px; /* Adjust the value to control the curve */
+	color: #ffffff;
+	border: 2px solid #f9a01b; 
+	font-size: large;
+
+
 }
 
 .heading-right {
@@ -44,6 +56,3 @@
 	margin-right: 10px;
 	font-size: 20px;
 }
-
-
-/* Add additional styles for the dropdown and other elements as needed */

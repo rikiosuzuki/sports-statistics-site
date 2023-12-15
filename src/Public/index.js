@@ -5,14 +5,19 @@ import Home from "./Home";
 
 function Public() {
   return (
-    <div className="row">
+    <div
+      className="row"
+      style={{
+        backgroundColor: "#1d428a",
+      }}
+    >
       <Heading />
       <div className="container">
-        <div className="row" style={{paddingTop:'5px'}}>
+        <div className="row" style={{ minHeight: "100vh" }}>
           <div className="col-1">
             <Sidebar />
           </div>
-          <div className="col-11">
+          <div className="col-11" >
             <Home />
           </div>
         </div>
