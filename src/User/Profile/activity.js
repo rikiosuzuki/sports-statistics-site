@@ -40,11 +40,12 @@ function Activity() {
     );
   };
 
-  const deletePost = (post) => {
+  const deletePost = async (post) => {
     //delete a post
     console.log("Deleting the post");
     console.log("Post ID: " + post._id);
-    setPosts(posts.filter((post) => post._id !== post._id));
+    await client.deletePost(post);
+    setPosts(posts.filter((poster) => poster._id !== post._id));
 
   };
 
