@@ -1,0 +1,36 @@
+.backgroudStyle {
+    background-color: #1d428a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contentBox {
+    border: 5px solid #8b2131;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    background-color: #0e2240;
+}
+
+.SignInStyle{
+    color: #fec524;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.buttonStyle{
+    background-color: #fec524;
+    border: none;
+    border-radius: 5px;
+    color: #0e2240;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+}
