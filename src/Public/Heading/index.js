@@ -29,7 +29,6 @@ function Heading() {
   
   return (
     <div className="heading">
-        <img src="../../images/Logo-NBA.png" width={80} />
       <h2>My NBA Page</h2>
 
       <div className="heading-center">
